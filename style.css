@@ -5,28 +5,44 @@ body {
         sans-serif;
 
     margin: 40px auto;
-    max-width: 650px;
+    max-width: 40%;
     line-height: 1.6;
-    font-size: 18px;
+    font-size: 21px;
     color: #444;
     padding: 0 10px
 }
 
-h1,
-h2,
-h3 {
-    line-height: 1.2
-}
 
-.portrait {
+.portrait-picture {
     width: 256px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
+    grid-area: portrait;
 }
 
-.portrait img {
+.portrait-picture img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+.header-title {
+    grid-area: title;
+    font-size: 48px;
+}
+
+.header-subtitle {
+    grid-area: subtitle;
+}
+
+
+.intro-container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: [title] auto [portrait] 45%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "title portrait"
+        "subtitle portrait";
 }
