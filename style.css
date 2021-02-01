@@ -131,7 +131,10 @@ a.link-bright:hover, a.link-bright:active{
     color: #bfddf2;
 }
 
-
 .emphasis-text {
     font-style: italic;
+}
+
+.footer-container {
+    padding-top: 200px;
 }
