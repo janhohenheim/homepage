@@ -8,11 +8,9 @@ body {
     max-width: 40%;
     line-height: 1.6;
     font-size: 21px;
-    color: #444;
+    color: #878787;
     padding: 0 10px;
-    initial;
 }
-
 
 .portrait-picture {
     grid-area: portrait;
@@ -25,7 +23,8 @@ body {
 
 .header-title {
     grid-area: title;
-    font-size: 48px;
+    font-size: 42px;
+    color: #6f706f;
 }
 
 .header-subtitle {
@@ -35,7 +34,7 @@ body {
 .intro-container {
     display: grid;
     place-items: center;
-    grid-template-columns: auto 45%;
+    grid-template-columns: auto 35%;
     grid-template-areas:
         "title portrait"
         "subtitle portrait";
@@ -51,6 +50,7 @@ body {
 
 .section-title {
     font-size: 36px;
+    color: #6f706f;
 }
 
 .content-container {
@@ -58,6 +58,7 @@ body {
     grid-template-columns: 25% auto;
     grid-template-areas:
         "experience-picture experience-title"
+        "experience-picture experience-subtitle"
         "experience-picture experience-text";
     column-gap: 30px;
 }
@@ -78,24 +79,27 @@ body {
     grid-area: experience-title;
 }
 
+.experience-subtitle {
+    grid-area: experience-subtitle;
+    font-size: 18px;
+}
 .experience-text {
+    margin-top: 10px;
     grid-area: experience-text;
 }
 
-.link-title {
+a.link-title {
     text-decoration: none;
 }
 
-.link-title a:link {
-    color: aqua;
+a.link-title:link, a.link-title:visited{
+    color: #4d61e2;
 }
 
-.link-title a:visited {
-    color: aqua;
+a.link-title:hover, a.link-title:active{
+    color: #639af2;
 }
-.link-title a:hover {
-    color: aqua;
-}
-.link-title a:active {
-    color: aqua;
+
+.emphasis-text {
+    font-style: italic;
 }
