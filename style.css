@@ -31,7 +31,7 @@ body {
 
 .centered-box {
     margin: auto;
-    max-width: 600px;
+    max-width: 900px;
 }
 
 .portrait-picture {
@@ -84,7 +84,7 @@ body {
 .list-container {
     display: grid;
     place-items: center;
-    gap: 20px;
+    row-gap: 10px;
 }
 
 .section-title {
@@ -105,7 +105,7 @@ body {
         "experience-picture experience-title"
         "experience-picture experience-text";
     column-gap: 30px;
-    width: min(600px, 100%);
+    width: min(900px, 100%);
 }
 
 @media (max-width: 600px) {
@@ -122,8 +122,8 @@ body {
     grid-area: experience-picture;
     display: block;
     margin-left: auto;
-    margin-right: calc(150px - 100%);
-    width: max(150px, 100%);
+    margin-right: calc(230px - 100%);
+    width: max(220px, 100%);
 }
 @media (max-width: 600px) {
     .experience-picture  {
@@ -132,7 +132,7 @@ body {
 }
 
 details:not([open]) + .experience-picture {
-    width: max(75px, 50%);
+    width: max(115px, 50%);
     margin-right: 0;
 }
 
