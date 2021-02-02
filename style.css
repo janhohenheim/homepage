@@ -119,6 +119,7 @@ body {
 }
 @media (max-width: 600px) {
     .experience-picture  {
+        width: max(115px, 50%);
         margin-right: auto;
     }
 }
@@ -136,8 +137,10 @@ details:not([open]) + .experience-picture {
     }
 }
 
-details[open] + .experience-picture {
-  animation: grow-experience-picture .15s ease-in;
+@media (min-width: 600px) {
+    details[open] + .experience-picture {
+        animation: grow-experience-picture .15s ease-in;
+    }
 }
 
 .experience-text[open] {
@@ -157,18 +160,6 @@ details[open] + .experience-picture {
     }
 }
   
-@media (max-width: 600px) {
-    @keyframes grow-experience-picture {
-        0% {
-            width: 50%;
-            margin-right: auto;
-        }
-        100% {
-            width: 80%;
-            margin-right: auto;
-        }
-    }
-}
 
 .experience-picture img {
     margin-top: 10px;
