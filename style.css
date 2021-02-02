@@ -34,15 +34,6 @@ body {
     max-width: 900px;
 }
 
-.portrait-picture {
-    grid-area: portrait;
-}
-
-.portrait-picture img {
-    border-radius: 8px;
-    width: 100%;
-}
-
 .header-title {
     grid-area: title;
     font-size: 42px;
@@ -64,18 +55,18 @@ body {
     place-items: center;
     grid-template-columns: auto 35%;
     grid-template-areas:
-        "title portrait"
-        "subtitle portrait";
+        "title"
+        "subtitle";
     gap: 10px;
     padding-bottom: 400px;
-    color: #6f706f;
+    color: white;
+    text-shadow: 1px 1px 8px black;
 }
 
 @media (max-width: 600px) {
     .intro-container {
         grid-template-columns: auto;
         grid-template-areas:
-            "portrait"
             "title"
             "subtitle";
     }
@@ -227,7 +218,7 @@ a.link-bright:link, a.link-bright:visited{
 }
 
 a.link-bright:hover, a.link-bright:active{
-    color: #bfddf2;
+    color: #93c7ea;
 }
 
 .emphasis-text {
