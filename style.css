@@ -30,9 +30,8 @@ body {
 }
 
 .centered-box {
-    margin: 40px auto;
+    margin: auto;
     max-width: 600px;
-    padding: 0 10px;
 }
 
 .portrait-picture {
@@ -106,6 +105,7 @@ body {
         "experience-picture experience-title"
         "experience-picture experience-text";
     column-gap: 30px;
+    width: min(600px, 100%);
 }
 
 @media (max-width: 600px) {
@@ -122,11 +122,17 @@ body {
     grid-area: experience-picture;
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: calc(150px - 100%);
+    width: max(150px, 100%);
+}
+@media (max-width: 600px) {
+    .experience-picture  {
+        margin-right: auto;
+    }
 }
 
 details:not([open]) + .experience-picture {
-    width: 50%;
+    width: max(75px, 50%);
     margin-right: 0;
 }
 
@@ -163,7 +169,7 @@ details[open] + .experience-picture {
             margin-right: auto;
         }
         100% {
-            width: 100%;
+            width: 80%;
             margin-right: auto;
         }
     }
@@ -179,11 +185,24 @@ details[open] + .experience-picture {
     grid-area: experience-title;
 }
 
+@media (max-width: 600px) {
+    .experience-title {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
 .experience-text {
     grid-area: experience-text;
-    width: 300px;
     display: block;
     min-height: 80px;
+}
+
+@media (max-width: 600px) {
+    .experience-text {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
 a.link-title {
