@@ -9,6 +9,12 @@ body {
     color: #878787;
 }
 
+@media (max-width: 600px) {
+    body{
+        font-size: 18px;
+    }
+}
+
 .background-image {
     position: absolute;
     top: 0;
@@ -25,7 +31,7 @@ body {
 
 .centered-box {
     margin: 40px auto;
-    max-width: 40%;
+    max-width: 600px;
     padding: 0 10px;
 }
 
@@ -41,6 +47,12 @@ body {
 .header-title {
     grid-area: title;
     font-size: 42px;
+}
+
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 32px;
+    }
 }
 
 .header-subtitle {
@@ -60,6 +72,16 @@ body {
     color: #6f706f;
 }
 
+@media (max-width: 600px) {
+    .intro-container {
+        grid-template-columns: auto;
+        grid-template-areas:
+            "portrait"
+            "title"
+            "subtitle";
+    }
+}
+
 .list-container {
     display: grid;
     place-items: center;
@@ -71,6 +93,12 @@ body {
     color: #6f706f;
 }
 
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 32px;
+    }
+}
+
 .content-container {
     display: grid;
     grid-template-columns: 25% auto;
@@ -79,6 +107,17 @@ body {
         "experience-picture experience-subtitle"
         "experience-picture experience-text";
     column-gap: 30px;
+}
+
+@media (max-width: 600px) {
+    .content-container {
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "experience-picture"
+        "experience-title"
+        "experience-subtitle"
+        "experience-text";
+    }
 }
 
 .experience-picture {
