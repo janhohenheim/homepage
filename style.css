@@ -58,7 +58,7 @@ body {
         "title"
         "subtitle";
     gap: 10px;
-    padding-bottom: 400px;
+    padding-bottom: 450px;
     color: white;
     text-shadow: 1px 1px 2px black;
 }
@@ -139,6 +139,9 @@ details[open] + .experience-picture {
   animation: grow-experience-picture .15s ease-in;
 }
 
+.experience-text[open] {
+    margin-bottom: 2em;
+}
 
 @keyframes grow-experience-picture {
     0% {
