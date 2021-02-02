@@ -104,7 +104,6 @@ body {
     grid-template-columns: 25% auto;
     grid-template-areas:
         "experience-picture experience-title"
-        "experience-picture experience-subtitle"
         "experience-picture experience-text";
     column-gap: 30px;
 }
@@ -115,15 +114,59 @@ body {
         grid-template-areas: 
         "experience-picture"
         "experience-title"
-        "experience-subtitle"
         "experience-text";
     }
 }
 
 .experience-picture {
     grid-area: experience-picture;
+    display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+details:not([open]) + .experience-picture {
+    width: 50%;
+    margin-right: 0;
+}
+
+
+@media (max-width: 600px) {
+    details:not([open]) + .experience-picture {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+details[open] + .experience-picture {
+  animation: grow-experience-picture .15s ease-in;
+}
+
+
+@keyframes grow-experience-picture {
+    0% {
+        align: right;
+        width: 50%;
+        margin-right: 0;
+    }
+    100% {
+        align: right;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+  
+@media (max-width: 600px) {
+    @keyframes grow-experience-picture {
+        0% {
+            width: 50%;
+            margin-right: auto;
+        }
+        100% {
+            width: 100%;
+            margin-right: auto;
+        }
+    }
 }
 
 .experience-picture img {
@@ -136,13 +179,11 @@ body {
     grid-area: experience-title;
 }
 
-.experience-subtitle {
-    grid-area: experience-subtitle;
-    font-size: 18px;
-}
 .experience-text {
-    margin-top: 10px;
     grid-area: experience-text;
+    width: 300px;
+    display: block;
+    min-height: 80px;
 }
 
 a.link-title {
