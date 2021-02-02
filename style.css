@@ -221,7 +221,7 @@ a.link-bright:hover, a.link-bright:active{
     color: #93c7ea;
 }
 
-a.email-link, a.link-bright:link, a.link-bright:visited, a.link-bright:hover, a.link-bright:active {
+a.email-link {
     text-decoration: none;
     color: white;
 }
