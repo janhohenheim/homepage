@@ -221,10 +221,50 @@ a.link-bright:hover, a.link-bright:active{
     color: #93c7ea;
 }
 
+a.email-link, a.link-bright:link, a.link-bright:visited, a.link-bright:hover, a.link-bright:active {
+    text-decoration: none;
+    color: white;
+}
+
 .emphasis-text {
     font-style: italic;
 }
 
 .footer-container {
-    padding-top: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto max(75%, 100% - 200) auto;
+    grid-template-areas:
+        "email-block empty-block copyright-block";
+    background-color: #878787;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+}
+
+.email-block {
+    grid-area: email-block;
+}
+
+.empty-block {
+    grid-area: empty-block;
+}
+
+.copyright-block {
+    grid-area: copyright-block;
 }
